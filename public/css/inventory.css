@@ -1,0 +1,68 @@
+
+.inventory{
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+.invcontent{
+    position: absolute;
+    text-align: center;
+  
+    padding-top: 2%;
+    top: -85%;
+    display: none;
+
+}
+.invcontent .heading{
+    margin-top: 2%;
+    font-family: 'Unbounded', cursive;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.invcontent p{
+    margin: 7%;
+    margin-top: 1%;
+    font-family:"Raleway",sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: relative;
+    top: 39%;
+    overflow: visible !important;
+  }
+ 
+  .swiper-slide.swiper-slide {
+    width: 40vw;
+    height: 382px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    filter: blur(5px);
+    margin-top: 5%;
+ }
+ 
+ .swiper-slide-active.swiper-slide-active{
+    filter: blur(0px);
+ }
+ .swiper-slide-active p{
+    display: block;
+ }
+  
+ 
+  .swiper-slide img {
+    display: block;
+    width: 50%;
+   
+  }
+  .swiper-slide-active .invcontent{
+    display: block;
+   
+    
+  }

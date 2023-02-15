@@ -1,0 +1,45 @@
+<section class="inventory">
+ 
+   
+
+    
+
+
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+
+ <% invimg.forEach((inv) =>{ %>
+            
+
+            
+
+
+            <div class="swiper-slide">
+
+                 
+              <!-- content part  -->
+<div class="invcontent">
+    <h1 class="heading"><%= inv.title %></h1>
+    <p> <%= inv.desc %>
+    </p>
+</div>
+
+                <img src=<%= inv.link %> alt="" class="fruitimg">
+
+            </div>
+
+           <%}) %>
+
+        
+
+
+
+            </div>
+        </div>
+
+</section>
+
+<script>
+
+
+</script>
