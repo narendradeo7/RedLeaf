@@ -45,9 +45,12 @@ section{
     z-index: -10;
     width: 100%;
     top: 0;
-    background-image: url(../images/convbackg.jpg);
+    /* background-image: url(../images/convbackg.jpg);
     background-size: cover;
-    background-position-y: 130px;
+    background-position-y: 130px; */
+    background-image: url(../images/redbgimg.png);
+    background-size: cover;
+    background-position-y: 234px;
     filter: blur(7px);
 
 }
@@ -224,7 +227,7 @@ section{
 }
 
 .home{
-    margin-top: 1%;
+    /* margin-top: 1%; */
 
 }
 
@@ -250,12 +253,13 @@ section{
 
     .nav_head{
         background-color: #fa1919c9;
+        transition: 0.5s ease-in-out;
         /* fixing navbar to top when it reaches o px from top  */
         position: sticky;
         top: -1px;
         z-index: 99999;
-        border-bottom: solid 1px #e5e5e5;
         border-top: solid 1px #e5e5e5;
+        min-height: 70px;
       }
       /* background fo nav  */
       .navbar{
@@ -272,18 +276,19 @@ section{
       /* anchor tags of nav  */
   
       .navbar a{
-        color: var(--main-cement) !important;
-      /* text-shadow: 0px 1px 1px black; */
+        color: var(--main-cement) ;
+      text-shadow: 0px 1px 1px black;
       font-weight: 300 ;
-      font-size: 125%;
+      font-size: 115%;
       font-family: 'Unbounded', cursive;
-        
+      transition: 0.3s ease-in-out;
       }
       .navbar a:hover{
-        color: rgb(255, 255, 255) !important;
-        text-shadow: 0px 2px 5px rgb(0, 252, 38);
-        font-size: 150%;
-        font-weight: 400;
+        transition: 0.3s ease-in-out;
+        color: rgb(81 255 5) !important;
+        text-shadow: 0px 2px 3px rgb(20 19 19);
+        font-size: 124%;
+        font-weight: 600;
      }
      /* targeting active navbar item  */
   
@@ -318,11 +323,43 @@ section{
        .nav-item.active{
         background-image: url(../images/shrub.png);
         background-position-y: 53%;
+        background-position-x: 2%;
         border-radius: 51%;
         background-repeat: no-repeat;
         filter: hue-rotate(8deg)
        }
-  
+/*   
+       // dropdown work on hover in pc only  */
+       @media (min-width:768px) {
+       .dropdown:hover .dropdown-menu{
+        display: block;
+    }
+
+
+}
+
+/* scrolled navbar  */
+
+.snavhead{
+    transition: 0.5s ease-in-out;
+    background-color: #ffffffe8;
+    
+}
+.snava{
+    transition: 0.3s ease-in-out;
+    color: green!important;
+   
+
+}
+.snavactive{
+    transition: 0.3s ease-in-out;
+    color: #ffffff !important;
+}
+
+
+
+
+
        /* styling og logo  */
   
        .logoimg{
@@ -354,11 +391,12 @@ section{
      /* styling of footer  */
 
      .footerlogo{
-        width: 287px;
-        filter: drop-shadow(7px 4px 5px rgb(198, 190, 251));
+        width: 261px;
+        filter: drop-shadow(7px 4px 5px rgb(243, 242, 248));
+        margin: 5% 0 -5% 0;
      }
      .footerlogo:hover{
-        filter: drop-shadow(7px 4px 5px rgb(243, 152, 68));  
+        filter: drop-shadow(7px 4px 5px rgb(6, 214, 120));  
      }
      
      /* styling of the footer box  */
@@ -375,12 +413,21 @@ section{
      
      .adress-f{
         font-family: 'Raleway', sans-serif;
-        color: var(--main-bg);
         position: relative;
         top: 5%;
+        color: #075344;
+        font-size: 25px;
      }
-     .adress-f:hover{
-        color: white;
+     .adress-f li:hover{
+        color: white !important;
+     }
+     .adress-f li a:hover{
+        color: white !important;
+     }
+     .adress-f li{
+        display: flex;
+        align-items: center;
+    
      }
      
      h3.footer_title{
@@ -465,4 +512,115 @@ section{
 .about:nth-child(even) .container .abtcontent{
     left: 0;
 }
+
+.aboutsec{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
     
+
+/* styling of the footer part  */
+
+#footer{
+    background-image: url("../images/footer-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: auto;
+    margin-top: 0%;
+}
+
+.moto{
+    font-family: 'Shantell Sans', cursive;
+    color: white;
+}
+.moto span{
+    margin: -11px;
+    -webkit-text-stroke:2px white;
+    font-size: 61px;
+    color: transparent;
+
+}
+
+.copyright{
+    background-color: #098d73;
+    font-size: 16px;
+    color: #fefefeb0;
+    font-family: 'Shantell Sans', cursive;
+    padding: 16px;
+}
+.copyright:hover{
+    color: white;
+}
+.copyright a{
+    color: white !important;
+}
+
+#footer .cicon .fa {
+    font-size: 61px;
+    /* margin-right: 7px; */
+}
+
+
+/* Styling for the home page  */
+
+.homebg{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/darkwood.jpg);
+    background-size: cover;
+    overflow: hidden;
+}
+
+.introtext{
+    color: white;
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    right: 52%;
+    top: 24%;
+    padding: 1%;
+    z-index: 2;
+    animation: intro 0.7s forwards;
+    animation-delay: 0.2s;
+}
+@keyframes intro {
+    0%{
+right: 52%;
+opacity: 0.2;
+    }
+    100%{
+        right: 7%;
+        opacity: 1;
+        z-index: 1000;
+    }
+    
+}
+
+
+/* preparing animation for introtext  */
+.introtext .emboss{
+    color: white;
+    font-size: 52px;
+    font-weight: 700;
+}
+.introtext p{
+    font-family: 'Unbounded', cursive;
+    letter-spacing: 3px;
+}
+.introtext .kmore{
+    background: #fb4a4ac7;
+    border-radius: 16%;
+    color: white;
+    margin-top: 2%;
+    padding: 7px 15px;
+}
+.webbg{
+    position: relative;
+    z-index:100;
+}

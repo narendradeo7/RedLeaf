@@ -47,26 +47,53 @@ document.querySelectorAll(".nav-link").forEach(function(elem){elem.addEventListe
       this.parentElement.classList.add("active");
 });});
 
-// making navlinks active according to the url 
-var path = window.location.pathname;
-    path = path.replace("/", "");
 
-    // getting path of the route loaded and matching it with the curent nav href 
 
-document.querySelectorAll(".nav-link").forEach((elem)=>{
-    var href =elem.href.replace("http://localhost:3000/","");
 
-    if(path==href){
-        document.querySelector(".nav-link.active").classList.remove("active");
-        document.querySelector(".nav-item.active").classList.remove("active");  
+
+
+// // making navlinks active according to the url 
+// var path = window.location.pathname;
+//     path = path.replace("/", "");
+
+//     // getting path of the route loaded and matching it with the curent nav href 
+
+// document.querySelectorAll(".nav-link").forEach((elem)=>{
+//     var href =elem.href.replace("http://localhost:3000/","");
+
+//     if(path==href){
+//         document.querySelector(".nav-link.active").classList.remove("active");
+//         document.querySelector(".nav-item.active").classList.remove("active");  
     
 
-        elem.classList.add("active");   
-        elem.parentElement.classList.add("active");
+//         elem.classList.add("active");   
+//         elem.parentElement.classList.add("active");
+//     }
+
+// })
+
+// // inventory part 
+
+// // making only active slide text visible
+
+
+// events related to scroll 
+var navhead=document.querySelector(".nav_head");
+var activenav=document.querySelector(".navbar a.active");
+var nav =document.querySelectorAll(".navbar a");
+
+document.addEventListener("scroll",function(){
+    if(window.scrollY>250){
+        navhead.classList.add("snavhead");
+        activenav.classList.add("snavactive");
+        nav.forEach((el)=>{el.classList.add("snava")});
     }
+    else{
+        
+        navhead.classList.remove("snavhead");
+        activenav.classList.remove("snavactive");
+        nav.forEach((el)=>{el.classList.remove("snava")});
+        
+    }
+});
 
-})
-
-// inventory part 
-
-// making only active slide text visible

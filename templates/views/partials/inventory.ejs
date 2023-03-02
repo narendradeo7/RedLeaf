@@ -1,4 +1,4 @@
-<section class="inventory">
+<section class="inventory" id="fruits">
  
    
 
@@ -20,11 +20,22 @@
               <!-- content part  -->
 <div class="invcontent">
     <h1 class="heading"><%= inv.title %></h1>
-    <p> <%= inv.desc %>
+    <p>Available in <br> <span class="emboss"> <%= inv.var %>+</span> Varieties <span class="emboss">/ <%= inv.clr %>+</span> Colours <br>with <br>Standard Cartoon Weight of <br><span class="emboss"><%= inv.swt %></span> Kg
     </p>
+    <!-- neon glowing button  -->
+<a href="/<%=inv.title %>"class="kmore">
+    <!-- span for glowing four sides first  -->
+    <span>       </span>
+    <span>       </span>
+    <span>       </span>
+    <span>       </span>
+    Know more ...
+
+</a>
+
 </div>
 
-                <img src=<%= inv.link %> alt="" class="fruitimg">
+                <img src=" <%= inv.link %> " alt="" class="fruitimg">
 
             </div>
 
